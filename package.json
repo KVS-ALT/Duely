@@ -5,11 +5,16 @@
   "type": "module",
   "license": "MIT",
   "author": "Keith Singh",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc"
+  },
   "engines": {
     "node": ">=22"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.0"
   }
 }
