@@ -11,7 +11,7 @@ export interface Deadline {
   // The title of the deadline
   title: string;
   // The due date of the deadline
-  due: string;
+  due: Date;
   // Whether the deadline is an all-day event or not
   allDay: boolean;
   // The URL for the deadline (optional)
