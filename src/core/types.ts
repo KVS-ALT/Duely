@@ -5,6 +5,7 @@ export type DeadlineKind = "due" | "closes" | "event";
 export type Source = "brightspace" | "canvas" | "moodle" | "generic";
 
 /** One deadline, in the same shape no matter which LMS it came from. */
+
 export interface Deadline {
   kind: DeadlineKind;
   /** Short course code, e.g. "CP264". Falls back to the full course name, or "Other". */
@@ -20,4 +21,17 @@ export interface Deadline {
   /** Link to the item in the LMS, if the feed has one. */
   url?: string;
   source: Source;
+}
+
+/** One calendar event, flattened from node-ical so the rest of the code stays simple. */
+export interface RawEvent {
+  uid: string;
+  summary: string;
+  location: string;
+  description: string;
+  categories: string[];
+  start: Date;
+  end?: Date;
+  allDay: boolean;
+  url?: string;
 }
