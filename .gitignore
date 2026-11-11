@@ -1,4 +1,5 @@
 node_modules/
 dist/
 *.ics
+!test/fixtures/*.ics
 .env
